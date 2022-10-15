@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <link href="https://res.cloudinary.com/dc04oiqvh/image/upload/v1651703014/03_pafv99.png" rel="icon" type="image/png" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js/funcionesReportes.js"></script>
+    </head>
+
+    <body>
+
+        <div class ="bg-white h-10 shadow-2xl">
+            <h1 class="text-xl leading-6 font-bold text-gray-900 text-center">Inicio</h1>
+        </div>
+        
+        <ul class="hidden text-sm font-medium text-center text-gray-500 rounded-lg divide-x divide-gray-200 shadow sm:flex dark:divide-gray-700 dark:text-gray-400">
+            <li class="w-full">
+                <a href="index.html" class="inline-block p-4 w-full bg-white hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">Menu Principal</a>
+            </li>
+            <li class="w-full">
+                <a href="categoria.html"" class="inline-block p-4 w-full bg-white hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">Categorias</a>
+            </li>
+            <li class="w-full">
+                <a href="cliente.html" class="inline-block p-4 w-full bg-white hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">Clientes</a>
+            </li>
+            <li class="w-full">
+                <a href="machine.html" class="inline-block p-4 w-full bg-white rounded-r-lg hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">Maquinas</a>
+            </li>
+            <li class="w-full">
+                <a href="mensajes.html" class="inline-block p-4 w-full bg-white rounded-r-lg hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">Mensajes</a>
+            </li>
+            <li class="w-full">
+                <a href="reservaciones.html" class="inline-block p-4 w-full bg-white rounded-r-lg hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">Reservaciones</a>
+            </li>
+            <li class="w-full">
+                <a class="inline-block p-4 w-full text-gray-900 bg-red-100 rounded-l-lg focus:ring-4 focus:ring-blue-300 active focus:outline-none dark:bg-gray-700 dark:text-white" aria-current="page">Reportes</a>
+            </li>
+           
+        </ul>
+        <h1 class="italic font-bold text-center text-4xl">Generador de reportes</h1></br>
+        <h2 class="text-center">Filtro de busqueda</h2></br>
+
+        <form>
+            <div class="grid gap-6 mb-6 md:grid-cols-2">
+                
+                <div>
+                    <label for="startDate" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Fecha de inicio</label>
+                    <input type="date" id="startDate" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  required>
+                </div>
+                <div>
+                    <label for="devolutionDate" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Fecha de finalización</label>
+                    <input type="date" id="devolutionDate" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  required>
+                </div>
+            </div>
+
+        </form>
+
+        <div style="text-align: center;" class="space-y-4">
+            <div>
+                <button onclick="traerReporteStatus()" class="bg-red-400 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full">
+                    Reporte Status Reservaciones
+                </button></br>
+            </div> 
+
+            <div>
+                <button onclick="traerReporteFechas()" class="bg-red-400 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full">
+                    Reporte Fechas Reservaciones
+                </button>
+
+            </div>
+            
+            <div>
+                <button onclick="traerReporteClientes()" class="bg-red-400 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full mb-8">
+                    Reporte Clientes Reservaciones
+                </button>
+
+            </div>
+        </div>
+
+
+        
+        <!--Resultado por status-->
+        <div id="resultadoStatus"> </div></br>
+
+        <!--Resutlado por Clientes-->
+
+        <div>
+            <div id="resultadoClientes"></div></br>
+        </div>
+
+        <div>
+            <div id="resultadoFechas"></div></br>
+        </div>
+
+
+        
+
+
+
+    </body>
+
+
+</html>

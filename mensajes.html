@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js/funcionesMensajes.js"></script>
+        <meta charset="UTF-8" />
+        <link href="https://res.cloudinary.com/dc04oiqvh/image/upload/v1651703014/03_pafv99.png" rel="icon" type="image/png" />
+        <script src="https://cdn.tailwindcss.com"></script>
+
+    </head>
+
+    <body>
+
+        <div class ="bg-white h-10 shadow-2xl">
+            <h1 class="text-xl leading-6 font-bold text-gray-900 text-center">Inicio</h1>
+        </div>
+        
+        <ul class="hidden text-sm font-medium text-center text-gray-500 rounded-lg divide-x divide-gray-200 shadow sm:flex dark:divide-gray-700 dark:text-gray-400">
+            <li class="w-full">
+                <a href="index.html" class="inline-block p-4 w-full bg-white hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">Menu Principal</a>
+            </li>
+            <li class="w-full">
+                <a href="categoria.html"" class="inline-block p-4 w-full bg-white hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">Categorias</a>
+            </li>
+            <li class="w-full">
+                <a href="cliente.html" class="inline-block p-4 w-full bg-white hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">Clientes</a>
+            </li>
+            <li class="w-full">
+                <a href="machine.html" class="inline-block p-4 w-full bg-white rounded-r-lg hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">Maquinas</a>
+            </li>
+            <li class="w-full">
+                <a class="inline-block p-4 w-full text-gray-900 bg-amber-100 rounded-l-lg focus:ring-4 focus:ring-blue-300 active focus:outline-none dark:bg-gray-700 dark:text-white" aria-current="page">Mensajes</a>
+            </li>
+            
+            
+            <li class="w-full">
+                <a href="reservaciones.html" class="inline-block p-4 w-full bg-white rounded-r-lg hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">Reservaciones</a>
+            </li>
+            <li class="w-full">
+                <a href="reporte.html" class="inline-block p-4 w-full bg-white rounded-r-lg hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">Reportes</a>
+            </li>
+        </ul>
+
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+        <form>
+            </div>
+                <div class="mb-6">
+                    <label for="messageText" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Ingrese el Mensaje:</label>
+                    <input type="text" id="messageText" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="..." required>
+                </div> 
+            </div>
+
+            <div class="grid gap-6 mb-6 md:grid-cols-2">
+                <div>
+            
+                    <label for="select-client" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Ingrese el Cliente :</label>
+                    <select id="select-client" class="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
+                <!--<option>Select a client</option>-->
+                        <option>...</option>
+                
+                    </select>
+        
+                </div>
+                <div>
+                    <label for="select-machine" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Ingrese la Maquina :</label>
+                    <select id="select-machine" class="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
+                <!--<option>Select a machine</option>-->
+                        <option>...</option>
+                
+                    </select>
+
+                </div>
+            </div>
+
+            <div style="text-align: center;">
+
+                <button onclick="postMessage()" class="bg-amber-400 hover:bg-amber-600 text-white font-bold py-2 px-4 rounded-full mb-8">
+                    Registrar Mensaje
+                </button>
+            </div>    
+        
+    
+        </form>
+
+
+        <script type="text/javascript"> 
+            window.onload = getMachine_Message(); 
+        </script>
+
+        <script type="text/javascript"> 
+            window.onload = getClient_Message(); 
+        </script>
+
+        <script type="text/javascript"> 
+            window.onload = getMessage(); 
+        </script>
+
+
+
+        
+
+        <div id="resultadoMensaje"></div>
+
+    </body>
+
+
+</html>
